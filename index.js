@@ -10,5 +10,10 @@ render((
     <Route path="/" component={App}/>
     <Route path="/repos" component={Repos}/>
     <Route path="/about" component={About}/>
+    <Route path="single-github-pages" component={App}>
+      <Route path="/repos" component={Repos}/>
+      <Route path="/about" component={About}/>
+    </Route>
+    <Route path="*" component='FOO'/>
   </Router>
 ), document.getElementById('app'))

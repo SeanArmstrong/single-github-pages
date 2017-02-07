@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 
 export default React.createClass({
   render() {
+    console.log("APP");
     return (
       <div>
         <h1>React Router Tutorial</h1>
