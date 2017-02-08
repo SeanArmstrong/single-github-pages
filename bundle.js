@@ -80,8 +80,8 @@
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/single-github-pages', component: _App2.default },
-	    _react2.default.createElement(_reactRouter.Route, { path: 'repos', component: _Repos2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _About2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: '/repos', component: _Repos2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default })
 	  ),
 	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: _2.default })
 	), document.getElementById('app'));
@@ -25472,33 +25472,6 @@
 	            _reactRouter.Link,
 	            { to: 'about' },
 	            'About1'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/about' },
-	            'About2'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: 'single-github-pages/about' },
-	            'About3'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/single-github-pages/about' },
-	            'About4'
 	          )
 	        ),
 	        _react2.default.createElement(

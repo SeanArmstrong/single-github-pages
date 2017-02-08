@@ -11,8 +11,8 @@ console.log('load bundle');
 render((
   <Router history={ browserHistory }>
     <Route path="/single-github-pages" component={App}>
-      <Route path="repos" component={ Repos }/>
-      <Route path="about" component={ About }/>
+      <Route path="/repos" component={ Repos }/>
+      <Route path="/about" component={ About }/>
     </Route>
     <Route path="*" component={ Component404 }/>
   </Router>
