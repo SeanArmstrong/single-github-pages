@@ -66,21 +66,24 @@
 
 	var _Repos2 = _interopRequireDefault(_Repos);
 
+	var _ = __webpack_require__(225);
+
+	var _2 = _interopRequireDefault(_);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	console.log('load bundle');
 
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
 	  { history: _reactRouter.browserHistory },
-	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: _App2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '/repos', component: _Repos2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: 'single-github-pages', component: _App2.default },
-	    _react2.default.createElement(_reactRouter.Route, { path: '/repos', component: _Repos2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default })
+	    { path: '/single-github-pages', component: _App2.default },
+	    _react2.default.createElement(_reactRouter.Route, { path: 'repos', component: _Repos2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _About2.default })
 	  ),
-	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: 'FOO' })
+	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: _2.default })
 	), document.getElementById('app'));
 
 /***/ },
@@ -25457,7 +25460,7 @@
 	      _react2.default.createElement(
 	        'h1',
 	        null,
-	        'React Router Tutorial'
+	        'React Router Single Page Test'
 	      ),
 	      _react2.default.createElement(
 	        'ul',
@@ -25467,8 +25470,8 @@
 	          null,
 	          _react2.default.createElement(
 	            _reactRouter.Link,
-	            { to: '/about' },
-	            'About'
+	            { to: 'about' },
+	            'About1'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -25476,7 +25479,34 @@
 	          null,
 	          _react2.default.createElement(
 	            _reactRouter.Link,
-	            { to: '/repos' },
+	            { to: '/about' },
+	            'About2'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: 'single-github-pages/about' },
+	            'About3'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/single-github-pages/about' },
+	            'About4'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: 'repos' },
 	            'Repos'
 	          )
 	        )
@@ -25537,6 +25567,34 @@
 	      "div",
 	      null,
 	      "Repos"
+	    );
+	  }
+	});
+
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: "404",
+	  render: function render() {
+	    console.log("404");
+	    return _react2.default.createElement(
+	      "div",
+	      null,
+	      "404"
 	    );
 	  }
 	});
